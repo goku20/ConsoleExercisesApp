@@ -35,6 +35,16 @@ namespace ConsoleExercisesApp
                             break;
 
                         // Add new cases as you progress with your exercises
+                        case 4:
+                           
+                            RunExerciseFour();
+                            break;
+
+                        case 5:
+
+                            RunExerciseFive();
+                            break;
+
 
                         case -1:
                             keepAlive = false;
@@ -85,13 +95,21 @@ namespace ConsoleExercisesApp
 
         private static void RunExerciseTwo()
         {
-            // Write your code here
+
+            DateTime timeNow = DateTime.Now;
+           
+            Console.WriteLine("todays date is:" + timeNow.ToShortDateString());
+
+            Console.WriteLine("tomorrows date is: " + timeNow.AddDays(1).ToShortDateString());
+  
+            Console.WriteLine("Yesterdays date is :" + timeNow.AddDays(-1).ToShortDateString());
         }
+
 
         // Cerate your exercise methods here
 
 
-        static void RunExerciseTre()
+       private static void RunExerciseTre()
         {
            
 
@@ -106,11 +124,30 @@ namespace ConsoleExercisesApp
            
         }
 
+       private static void RunExerciseFour()
 
+        {
+            
 
+            String str = "The quick fox Jumped Ower the DOG";
+            
+            Console.WriteLine("String:  {0} ", str.Trim().ToLower());
+         
 
+        }
+        
+        private static void RunExerciseFive()
 
+        {
+            int[] numbers = new int[] { 1, 2, 3, 4, 5 };
+            //string numbers = new string ( 1, 2, 3, 4, 5 );
+            // int i = Convert.ToInt32(numbers); 
+            //Console.WriteLine(i);
 
+            int index = Array.IndexOf(numbers, 2);
+            Console.WriteLine("Index of 2: " + index);
+            //;
+        }
     }// end of program
     // no code here plz
 }
