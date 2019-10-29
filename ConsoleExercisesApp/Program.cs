@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleExercisesApp
 {
@@ -139,14 +140,20 @@ namespace ConsoleExercisesApp
         private static void RunExerciseFive()
 
         {
-            int[] numbers = new int[] { 1, 2, 3, 4, 5 };
+            var numbers = new List<int>() { 1, 2, 3, 4, 5 };
+            numbers.Add(1);
+            numbers.AddRange(new int[3] { 5, 6, 7 });
+            foreach (int number in numbers)
+                Console.Write(number);
+
+            //int[] numbers = new int[] { 1, 2, 3, 4, 5 };
             //string numbers = new string ( 1, 2, 3, 4, 5 );
             // int i = Convert.ToInt32(numbers); 
             //Console.WriteLine(i);
 
-            int index = Array.IndexOf(numbers, 2);
-            Console.WriteLine("Index of 2: " + index);
-            //;
+            //int index = Array.IndexOf(number2, 2);
+            //Console.WriteLine("Index of 2: " + index);
+            ////;
         }
     }// end of program
     // no code here plz
